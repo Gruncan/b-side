@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="deck-endpoint" content="">
+  <title>Side A</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,520;0,9..144,640;1,9..144,520&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+  <div class="shell">
+    <section class="stage" data-stage data-lean="none" aria-label="Song deck">
+      <header class="top">
+        <h1 class="wordmark"><span data-title>Side A</span> <span class="wordmark__meta">deck</span></h1>
+        <div class="top__side">
+          <p class="top__source">via <span data-provider>Catalog</span></p>
+          <button type="button" class="count" data-action="open-playlist">
+            <span data-kept-count>2</span> kept
+          </button>
+        </div>
+      </header>
+
+      <div class="stage__main">
+        <p class="hint" data-hint>Drag the card. Left, right, and down arrow keys work too.</p>
+
+        <!--
+          Picture of a session already in progress, so the playlist row is visible.
+          fixtures/deck.json is the catalog. Your start() should render the queue
+          from that file; the playlist begins empty.
+        -->
+        <div class="deck" data-deck>
+          <article class="card" data-depth="2" style="--c1:#e7f0d8;--c2:#5e8c6a;--c3:#f7fbf2;--c4:#243328" inert aria-hidden="true">
+            <div class="card__art"></div>
+          </article>
+          <article class="card" data-depth="1" style="--c1:#ff4d4d;--c2:#14080c;--c3:#ffd1a8;--c4:#3a1018" inert aria-hidden="true">
+            <div class="card__art"></div>
+          </article>
+          <article class="card" data-depth="0" data-card-id="catalog:track:late-meridian" style="--c1:#e7b3c8;--c2:#3a2458;--c3:#f0d0a0;--c4:#1b1230">
+            <div class="card__art" data-art>
+              <img data-field="artwork" alt="" hidden>
+              <p class="stamp stamp--keep" data-stamp="keep">Keep</p>
+              <p class="stamp stamp--pass" data-stamp="pass">Pass</p>
+              <div class="transport" data-transport data-preview-state="paused">
+                <button type="button" class="transport__play" data-action="toggle-preview" aria-label="Play preview">
+                  <svg class="icon icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+                  <svg class="icon icon--pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.2v14H7zm6.8 0H17v14h-3.2z"/></svg>
+                </button>
+                <span class="transport__time" data-field="elapsed">0:00</span>
+                <span class="transport__bar" aria-hidden="true"><span class="transport__fill" data-progress></span></span>
+                <span class="transport__time" data-field="duration">0:30</span>
+              </div>
+            </div>
+            <div class="card__body">
+              <p class="card__kicker">
+                <span data-field="source">Catalog</span>
+                <span data-badges></span>
+              </p>
+              <h2 class="card__title" data-field="title">Late Meridian</h2>
+              <p class="card__artists" data-field="artists">Sable Choir</p>
+              <ul class="traits" data-traits>
+                <li class="trait" aria-label="Energy Medium">
+                  <span class="trait__label" data-field="label">Energy</span>
+                  <span class="trait__meter" aria-hidden="true"><span class="trait__fill" data-fill style="--value: 0.58"></span></span>
+                  <span class="trait__value" data-field="display">Medium</span>
+                </li>
+                <li class="trait" aria-label="Mood Bright">
+                  <span class="trait__label">Mood</span>
+                  <span class="trait__meter" aria-hidden="true"><span class="trait__fill" style="--value: 0.63"></span></span>
+                  <span class="trait__value">Bright</span>
+                </li>
+                <li class="trait" aria-label="Tempo 110">
+                  <span class="trait__label">Tempo</span>
+                  <span class="trait__meter" aria-hidden="true"><span class="trait__fill" style="--value: 0.55"></span></span>
+                  <span class="trait__value">110</span>
+                </li>
+              </ul>
+              <p class="card__reason" data-field="reason">A step up in energy from the last track you kept.</p>
+              <a class="card__link" data-field="link" target="_blank" rel="noreferrer noopener" hidden>Open</a>
+            </div>
+          </article>
+        </div>
+
+        <section class="empty" data-empty hidden>
+          <h2 data-empty-title>That's the stack</h2>
+          <p data-empty-body>Everything you kept is in the playlist. Save it when a provider is connected.</p>
+          <button type="button" data-action="open-playlist">Review playlist</button>
+        </section>
+
+        <p class="error" data-error hidden>The deck could not be loaded. The last good stack is still here.</p>
+
+        <div class="actions" data-actions-row>
+          <button type="button" data-action="pass" aria-label="Pass">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <span data-label>Pass</span>
+          </button>
+          <button type="button" data-action="keep" aria-label="Keep">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19s-7-4.4-7-9a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 4.6-7 9-7 9z"/></svg>
+            <span data-label>Keep</span>
+          </button>
+          <button type="button" data-action="later" aria-label="Later">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 8v5l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <span data-label>Later</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <aside class="playlist" data-playlist-panel aria-label="Playlist">
+      <div class="mix__grab" aria-hidden="true"></div>
+      <header class="mix__head">
+        <div>
+          <h2>Playlist</h2>
+          <p class="mix__sync" data-sync="local">On this device</p>
+        </div>
+        <div class="mix__tools" data-actions>
+          <button type="button" class="mix__close" data-action="close-playlist">Close</button>
+          <button type="button" class="button button--solid" data-action="remote" data-method="POST" data-href="/api/deck/export">Save playlist</button>
+        </div>
+      </header>
+      <p class="mix__empty" data-playlist-empty hidden>Nothing kept yet.</p>
+      <ol class="mix__list" data-playlist>
+        <li class="mix__item">
+          <span class="mix__swatch" data-art style="--c1:#f2d2b6;--c2:#1f6f78;--c3:#e7a07a;--c4:#12343a"></span>
+          <span class="mix__meta">
+            <span class="mix__title" data-field="title">Glasshouse Hour</span>
+            <span class="mix__artists" data-field="artists">Mara Voss</span>
+          </span>
+          <button type="button" data-action="undo" data-card-id="catalog:track:glasshouse-hour">Remove</button>
+        </li>
+        <li class="mix__item">
+          <span class="mix__swatch" data-art style="--c1:#f25c2a;--c2:#1a1c2c;--c3:#ffb25e;--c4:#0e1018"></span>
+          <span class="mix__meta">
+            <span class="mix__title">Northbound</span>
+            <span class="mix__artists">The Kiln</span>
+          </span>
+          <button type="button" data-action="undo" data-card-id="catalog:track:northbound">Remove</button>
+        </li>
+      </ol>
+    </aside>
+
+    <button type="button" class="scrim" data-scrim data-action="close-playlist" hidden aria-label="Close playlist"></button>
+  </div>
+
+  <audio data-preview-audio preload="none"></audio>
+  <p class="live" data-live aria-live="polite"></p>
+
+  <template id="card-template">
+    <article class="card" data-depth="0">
+      <div class="card__art" data-art>
+        <img data-field="artwork" alt="" hidden>
+        <p class="stamp stamp--keep" data-stamp="keep">Keep</p>
+        <p class="stamp stamp--pass" data-stamp="pass">Pass</p>
+        <div class="transport" data-transport data-preview-state="paused">
+          <button type="button" class="transport__play" data-action="toggle-preview" aria-label="Play preview">
+            <svg class="icon icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+            <svg class="icon icon--pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.2v14H7zm6.8 0H17v14h-3.2z"/></svg>
+          </button>
+          <span class="transport__time" data-field="elapsed">0:00</span>
+          <span class="transport__bar" aria-hidden="true"><span class="transport__fill" data-progress></span></span>
+          <span class="transport__time" data-field="duration">0:30</span>
+        </div>
+      </div>
+      <div class="card__body">
+        <p class="card__kicker">
+          <span data-field="source"></span>
+          <span data-badges></span>
+        </p>
+        <h2 class="card__title" data-field="title"></h2>
+        <p class="card__artists" data-field="artists"></p>
+        <ul class="traits" data-traits></ul>
+        <p class="card__reason" data-field="reason"></p>
+        <a class="card__link" data-field="link" target="_blank" rel="noreferrer noopener" hidden>Open</a>
+      </div>
+    </article>
+  </template>
+
+  <template id="trait-template">
+    <li class="trait">
+      <span class="trait__label" data-field="label"></span>
+      <span class="trait__meter" aria-hidden="true"><span class="trait__fill" data-fill></span></span>
+      <span class="trait__value" data-field="display"></span>
+    </li>
+  </template>
+
+  <template id="playlist-item-template">
+    <li class="mix__item">
+      <span class="mix__swatch" data-art></span>
+      <span class="mix__meta">
+        <span class="mix__title" data-field="title"></span>
+        <span class="mix__artists" data-field="artists"></span>
+      </span>
+      <button type="button" data-action="undo">Remove</button>
+    </li>
+  </template>
+
+  <template id="action-template">
+    <button type="button" class="button button--solid" data-action="remote"></button>
+  </template>
+
+  <!--
+    Loader only, after scripts/build-ui.sh. wasm-bindgen emits the module.
+    Application behavior stays in Rust; this file does not ship any.
+    <script type="module">
+      import init, { start } from "./pkg/deck_ui.js";
+      init().then(() => start());
+    </script>
+  -->
+</body>
+</html>

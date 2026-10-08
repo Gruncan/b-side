@@ -1,0 +1,4 @@
+/target
+/ui/pkg
+**/*.rs.bk
+.DS_Store
