@@ -1,0 +1,23 @@
+:root {
+  color-scheme: dark;
+  --bg: oklch(0.16 0.018 65);
+  --bg-raised: oklch(0.22 0.02 65);
+  --ink: oklch(0.96 0.012 85);
+  --ink-dim: oklch(0.76 0.022 80);
+  --line: oklch(0.96 0.01 85 / 0.14);
+  --keep: oklch(0.73 0.17 42);
+  --keep-ink: oklch(0.22 0.04 50);
+  --pass: oklch(0.55 0.12 230);
+  --card: oklch(0.975 0.008 85);
+  --card-ink: oklch(0.25 0.02 60);
+  --card-dim: oklch(0.46 0.02 65);
+  --meter: oklch(0.9 0.01 85);
+  --shadow: 0 28px 70px oklch(0.08 0.02 60 / 0.55);
+  --radius: 1.7rem;
+  --deck-width: 26rem;
+  --glow: #e7b3c8;
+  --font-display: "Fraunces", "Iowan Old Style", Palatino, "Palatino Linotype", "Liberation Serif", Georgia, serif;
+  --font-ui: "Figtree", "Avenir Next", "Segoe UI", "Liberation Sans", sans-serif;
+  --ease-out: cubic-bezier(0.16, 0.84, 0.32, 1);
+  --ease-snap: cubic-bezier(0.2, 0.7, 0.2, 1);
+}

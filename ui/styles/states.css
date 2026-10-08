@@ -1,0 +1,25 @@
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card[data-leaving="true"][data-choice="keep"],
+  .card[data-leaving="true"][data-choice="pass"],
+  .card[data-leaving="true"][data-choice="later"],
+  .playlist,
+  .actions button {
+    transition: none;
+    animation: none;
+  }
+}
+
+@media (forced-colors: active) {
+  .card,
+  .stamp,
+  .actions button,
+  .playlist {
+    border: 1px solid CanvasText;
+  }
+
+  .trait__fill,
+  .transport__fill {
+    background: CanvasText;
+  }
+}
