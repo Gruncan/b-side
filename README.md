@@ -6,7 +6,7 @@ The page is HTML and CSS. `crates/deck-ui` is a Rust skeleton: the payload types
 
 ```sh
 cargo test
-python3 -m http.server -d ui 8080
+python3 -m http.server 8080
 ```
 
-Open `http://127.0.0.1:8080`. Set `<meta name="deck-endpoint">` when your backend can serve the same JSON as `ui/fixtures/deck.json`.
+Open `http://127.0.0.1:8080`. That root page sends you to `ui/`, where the deck, cover images, and favicon live. Set `<meta name="deck-endpoint">` when your backend can serve the same JSON as `ui/fixtures/deck.json`.

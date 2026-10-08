@@ -119,10 +119,18 @@
   width: 2.6rem;
   height: 2.6rem;
   border-radius: 0.45rem;
+  overflow: hidden;
   background:
     radial-gradient(circle at 30% 25%, var(--c1), transparent 55%),
     radial-gradient(circle at 80% 80%, var(--c2), transparent 50%),
     linear-gradient(160deg, var(--c3), var(--c4));
+}
+
+.mix__swatch img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .mix__title,

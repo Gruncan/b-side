@@ -50,7 +50,7 @@ The stylesheet reacts to attributes. Your `start` sets them. It does not restyle
 | `data-lean="keep\|pass\|later\|none"` on `[data-stage]` | Highlights the matching action. |
 | `data-leaving="true"` and `data-choice="keep\|pass\|later"` | Flies the card off. Remove the node on `transitionend` for `transform` (and on a timeout, because reduced motion may not fire one). |
 | `data-enter="true"` | Rises the new top card out of the stack. |
-| `--c1`…`--c4` | Artwork gradient when `artwork.url` is missing. Also set `--glow` on `<html>` from one of those colors. |
+| `--c1`…`--c4` | Artwork gradient behind the cover, and the fallback when `artwork.url` is missing. Also set `--glow` on `<html>` from one of those colors. |
 | `data-preview-state="paused\|playing\|ended\|missing"` | Play icon, pause icon, or the "No preview" label. |
 | `--progress` on `[data-progress]` | Preview bar, 0 to 1. |
 | `data-open="true"` on `[data-playlist-panel]` | Opens the sheet below 960px. At 960px and up the rail is always visible. |

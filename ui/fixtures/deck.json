@@ -25,7 +25,7 @@
       "source": "Catalog",
       "reason": "A calm place to start.",
       "artwork": {
-        "url": null,
+        "url": "fixtures/artwork/glasshouse-hour.jpg",
         "colors": ["#f2d2b6", "#1f6f78", "#e7a07a", "#12343a"]
       },
       "preview": { "url": "fixtures/previews/glasshouse.mp3", "duration_ms": 30000 },
@@ -46,7 +46,7 @@
       "badges": ["Instrumental"],
       "reason": "Higher energy than a calm start.",
       "artwork": {
-        "url": null,
+        "url": "fixtures/artwork/northbound.jpg",
         "colors": ["#f25c2a", "#1a1c2c", "#ffb25e", "#0e1018"]
       },
       "preview": { "url": "fixtures/previews/northbound.mp3", "duration_ms": 30000 },
@@ -63,7 +63,7 @@
       "source": "Your library",
       "reason": "No preview from this provider. The meters are still enough to choose.",
       "artwork": {
-        "url": null,
+        "url": "fixtures/artwork/paper-boats.jpg",
         "colors": ["#d9d3c5", "#8aa0b2", "#f7f4ee", "#3e4c59"]
       },
       "preview": null,
@@ -80,7 +80,7 @@
       "source": "Catalog",
       "reason": "A step up in energy from the last track you kept.",
       "artwork": {
-        "url": null,
+        "url": "fixtures/artwork/late-meridian.jpg",
         "colors": ["#e7b3c8", "#3a2458", "#f0d0a0", "#1b1230"]
       },
       "preview": { "url": "fixtures/previews/late-meridian.mp3", "duration_ms": 30000 },
@@ -98,7 +98,7 @@
       "badges": ["Live"],
       "reason": "Fast, bright, and a jump from the previous tempo.",
       "artwork": {
-        "url": null,
+        "url": "fixtures/artwork/red-circuit.jpg",
         "colors": ["#ff4d4d", "#14080c", "#ffd1a8", "#3a1018"]
       },
       "preview": { "url": "fixtures/previews/red-circuit.mp3", "duration_ms": 30000 },
@@ -115,7 +115,7 @@
       "source": "Your library",
       "reason": "Close to the calm tracks you kept.",
       "artwork": {
-        "url": null,
+        "url": "fixtures/artwork/soft-weather.jpg",
         "colors": ["#e7f0d8", "#5e8c6a", "#f7fbf2", "#243328"]
       },
       "preview": { "url": "fixtures/previews/soft-weather.mp3", "duration_ms": 30000 },

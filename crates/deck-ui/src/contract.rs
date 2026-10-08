@@ -219,6 +219,16 @@ mod tests {
         assert_eq!(feed.provider.id, "catalog");
         assert!(feed.cards.len() >= 4);
         assert!(feed.cards.iter().any(|card| card.preview.is_none()));
+        let ui = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../../ui");
+        for card in &feed.cards {
+            let url = card
+                .artwork
+                .url
+                .as_deref()
+                .unwrap_or_else(|| panic!("{} has no cover", card.id));
+            assert!(is_safe_asset_url(url), "{url}");
+            assert!(ui.join(url).is_file(), "missing cover {url}");
+        }
         assert!(feed.cards.iter().all(|card| {
             card.traits
                 .iter()
